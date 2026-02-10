@@ -19,7 +19,7 @@ TTS 能播语音
 整合成语音服务
 
 
-DAY 1:
+DAY 1(26.2.9):
 语音 → Whisper → Qwen → 语音
 - 🎙 Record audio from microphone  
 - 🧠 Speech-to-text using Whisper  
@@ -27,6 +27,21 @@ DAY 1:
 - 🔊 Text-to-speech using Edge-TTS  
 - 💻 Fully local, no cloud dependency
 
-ollama run qwen2.5:7b
-brew install ffmpeg
+ollama run qwen2.5:7b;
+brew install ffmpeg;
 pip install openai-whisper edge-tts sounddevice scipy requests
+
+DAY 2(26.2.10):
+做对话 API
+存训练数据
+构造 JSON 数据集
+
+转为LoRA标准格式脚本：convert_dataset.py
+
+微调脚本：lora_train.py (安装依赖 pip install transformers datasets peft accelerate bitsandbytes
+)
+
+流程：语音 → dataset.json → LoRA 微调 → 客服模型
+
+🎤 → Whisper → Qwen → 保存 → 微调 → 新模型 → 更专业回复
+

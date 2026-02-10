@@ -6,9 +6,12 @@ import requests
 import asyncio
 import edge_tts
 import os
+import json
+from datetime import datetime
 
 AUDIO_FILE = "input.wav"
 REPLY_FILE = "reply.mp3"
+DATASET_FILE = "dataset.json"
 
 # 1. 录音
 def record_audio(duration=5, fs=16000):
@@ -51,12 +54,43 @@ async def text_to_speech(text):
 def play_audio():
     os.system(f"afplay {REPLY_FILE}")
 
+# 6. 保存为训练数据(JSON)
+def save_to_dataset(user_text, ai_text):
+    record = {
+        "instruction": user_text,
+        "input": "",
+        "output": ai_text,
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+    # 如果文件存在，追加；否则新建
+    if os.path.exists(DATASET_FILE):
+        with open(DATASET_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    else:
+        data = []
+
+    data.append(record)
+
+    with open(DATASET_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print("📁 已保存到训练数据集 dataset.json")
+
+
 # 主流程
 def main():
     record_audio(5)
     user_text = speech_to_text()
+    if not user_text.strip():
+        print("⚠️ 未识别到有效语音")
+        return
+
     reply_text = call_qwen(user_text)
     print("AI 回复:", reply_text)
+    # 保存对话为训练数据
+    save_to_dataset(user_text, reply_text)
+
     asyncio.run(text_to_speech(reply_text))
     play_audio()
 
