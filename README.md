@@ -45,3 +45,10 @@ DAY 2(26.2.10):
 
 🎤 → Whisper → Qwen → 保存 → 微调 → 新模型 → 更专业回复
 
+DAY 3(26.2.11):
+修改依赖，在本地安装qwen模型
+ HF_ENDPOINT=https://hf-mirror.com huggingface-cli download Qwen/Qwen2.5-1.5B-Instruct --local-dir ./qwen2.5-1.5b
+
+增加compare脚本，验证微调前后结果
+
+
