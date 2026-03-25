@@ -21,11 +21,11 @@ TTS 能播语音
 
 DAY 1(26.2.9):
 语音 → Whisper → Qwen → 语音
-- 🎙 Record audio from microphone  
-- 🧠 Speech-to-text using Whisper  
-- 🤖 Generate response using local Qwen model (Ollama)  
-- 🔊 Text-to-speech using Edge-TTS  
-- 💻 Fully local, no cloud dependency
+- Record audio from microphone  
+- Speech-to-text using Whisper  
+- Generate response using local Qwen model (Ollama)  
+- Text-to-speech using Edge-TTS  
+- All local, no cloud dependency
 
 ollama run qwen2.5:7b;
 brew install ffmpeg;
@@ -43,7 +43,7 @@ DAY 2(26.2.10):
 
 流程：语音 → dataset.json → LoRA 微调 → 客服模型
 
-🎤 → Whisper → Qwen → 保存 → 微调 → 新模型 → 更专业回复
+Audio → Whisper → Qwen → 保存 → 微调 → 新模型 → 更专业回复
 
 DAY 3(26.2.11):
 修改依赖，在本地安装qwen模型

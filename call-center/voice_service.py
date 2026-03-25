@@ -21,16 +21,16 @@ model.eval()
 
 # ===== 录音 =====
 def record_audio(filename="input.wav", duration=5, fs=16000):
-    print("🎙 开始说话...")
+    print("开始说话...")
     audio = sd.rec(int(duration * fs), samplerate=fs, channels=1)
     sd.wait()
     write(filename, fs, audio)
-    print("✅ 录音完成")
+    print("录音完成")
 
 # ===== 语音转文字 =====
 def speech_to_text():
     result = asr_model.transcribe("input.wav")
-    print("📝 识别结果:", result["text"])
+    print("识别结果:", result["text"])
     return result["text"]
 
 # ===== 大模型推理 =====
@@ -40,14 +40,14 @@ def llm_reply(text):
     with torch.no_grad():
         output = model.generate(**inputs, max_new_tokens=200)
     reply = tokenizer.decode(output[0], skip_special_tokens=True)
-    print("🤖 模型回复:", reply)
+    print("模型回复:", reply)
     return reply
 
 # ===== 文本转语音 =====
 async def text_to_speech(text):
     communicate = edge_tts.Communicate(text=text, voice="zh-CN-XiaoxiaoNeural")
     await communicate.save("reply.mp3")
-    print("🔊 已生成语音 reply.mp3")
+    print("已生成语音 reply.mp3")
 
 # ===== 主流程 =====
 def main():
