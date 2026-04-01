@@ -1,0 +1,4 @@
+[
+   {"id": "math_1", "prompt": "2+2等于多少？", "expected": "4"},
+   {"id": "fact_1", "prompt": "法国首都是哪里？", "expected": "巴黎"}
+]
