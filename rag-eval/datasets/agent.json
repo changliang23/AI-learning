@@ -1,0 +1,29 @@
+[
+  {
+    "id": "agent-1",
+    "task": "查询北京天气并给出出行建议",
+    "expected_goal": "正确调用 weather 工具获取北京天气，并基于天气生成简洁建议。",
+    "tool_inputs": {
+      "city": "北京"
+    }
+  },
+  {
+    "id": "agent-2",
+    "task": "查询今天汇率并把 100 美元换算成人民币",
+    "expected_goal": "调用 fx_rate 工具获取 USD/CNY 汇率，并完成换算。",
+    "tool_inputs": {
+      "base": "USD",
+      "quote": "CNY",
+      "amount": 100
+    }
+  },
+  {
+    "id": "agent-3",
+    "task": "安排一个两步计划：先查项目状态，再总结给团队",
+    "expected_goal": "调用 project_status 工具读取状态后，再组织一段清晰总结。",
+    "tool_inputs": {
+      "project": "RAG Evaluation Platform"
+    }
+  }
+]
+

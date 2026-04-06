@@ -1,0 +1,33 @@
+[
+  {
+    "id": "rag-1",
+    "question": "OpenClaw 平台的核心目标是什么？",
+    "ground_truth": "OpenClaw 平台的核心目标是统一 RAG 与 Agent 应用的测试、评估和报告生成流程。",
+    "contexts": [
+      "OpenClaw 是一个 AI 应用评测平台，用于统一管理 RAG 和 Agent 的实验、数据集与报告。",
+      "平台通过自动化运行器串联数据集、模型调用、评估器与可视化面板。",
+      "系统支持多模型对比、向量检索和执行轨迹分析。"
+    ]
+  },
+  {
+    "id": "rag-2",
+    "question": "RAG 测评通常关注哪些核心维度？",
+    "ground_truth": "RAG 测评通常关注 Context Relevance、Answer Faithfulness 和 Answer Correctness。",
+    "contexts": [
+      "RAG 的上下文相关性用于衡量检索片段是否贴合问题。",
+      "Faithfulness 用于判断回答是否忠于提供的上下文证据。",
+      "Correctness 用于比较回答与标准答案的一致程度。"
+    ]
+  },
+  {
+    "id": "rag-3",
+    "question": "为什么在 RAG 系统中引入向量数据库？",
+    "ground_truth": "因为向量数据库可以将文档编码为向量并进行语义相似检索，从而提升检索效率和上下文匹配质量。",
+    "contexts": [
+      "向量数据库通过嵌入表示支持相似度搜索。",
+      "在 RAG 流程中，检索阶段需要快速定位与问题语义最接近的知识片段。",
+      "与关键词匹配相比，向量检索更适合处理表达方式多样的查询。"
+    ]
+  }
+]
+
