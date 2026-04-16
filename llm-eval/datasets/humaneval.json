@@ -1,0 +1,122 @@
+[
+  {
+    "task_id": "HumanEval/0",
+    "prompt": "实现函数 `add(a, b)`，返回两个整数之和。",
+    "entry_point": "def add(a: int, b: int) -> int:",
+    "tests": [
+      "assert add(1, 2) == 3",
+      "assert add(-1, 1) == 0",
+      "assert add(0, 0) == 0"
+    ]
+  },
+  {
+    "task_id": "HumanEval/1",
+    "prompt": "实现函数 `is_even(n)`，如果整数是偶数返回 True，否则返回 False。",
+    "entry_point": "def is_even(n: int) -> bool:",
+    "tests": [
+      "assert is_even(2) is True",
+      "assert is_even(3) is False",
+      "assert is_even(0) is True"
+    ]
+  },
+  {
+    "task_id": "HumanEval/2",
+    "prompt": "实现函数 `factorial(n)`，返回非负整数 n 的阶乘。",
+    "entry_point": "def factorial(n: int) -> int:",
+    "tests": [
+      "assert factorial(0) == 1",
+      "assert factorial(1) == 1",
+      "assert factorial(5) == 120"
+    ]
+  },
+  {
+    "task_id": "HumanEval/3",
+    "prompt": "实现函数 `reverse_string(s)`，返回字符串反转后的结果。",
+    "entry_point": "def reverse_string(s: str) -> str:",
+    "tests": [
+      "assert reverse_string('abc') == 'cba'",
+      "assert reverse_string('') == ''",
+      "assert reverse_string('level') == 'level'"
+    ]
+  },
+  {
+    "task_id": "HumanEval/4",
+    "prompt": "实现函数 `max_of_three(a, b, c)`，返回三个数中的最大值。",
+    "entry_point": "def max_of_three(a: int, b: int, c: int) -> int:",
+    "tests": [
+      "assert max_of_three(1, 2, 3) == 3",
+      "assert max_of_three(9, 4, 7) == 9",
+      "assert max_of_three(-1, -5, -3) == -1"
+    ]
+  },
+  {
+    "task_id": "HumanEval/5",
+    "prompt": "实现函数 `count_vowels(s)`，返回字符串中元音字母 a/e/i/o/u 的数量。",
+    "entry_point": "def count_vowels(s: str) -> int:",
+    "tests": [
+      "assert count_vowels('hello') == 2",
+      "assert count_vowels('sky') == 0",
+      "assert count_vowels('AEIOUaeiou') == 10"
+    ]
+  },
+  {
+    "task_id": "HumanEval/6",
+    "prompt": "实现函数 `fibonacci(n)`，返回第 n 个斐波那契数，其中 fibonacci(0)=0, fibonacci(1)=1。",
+    "entry_point": "def fibonacci(n: int) -> int:",
+    "tests": [
+      "assert fibonacci(0) == 0",
+      "assert fibonacci(1) == 1",
+      "assert fibonacci(7) == 13"
+    ]
+  },
+  {
+    "task_id": "HumanEval/7",
+    "prompt": "实现函数 `is_palindrome(s)`，判断字符串是否是回文串。",
+    "entry_point": "def is_palindrome(s: str) -> bool:",
+    "tests": [
+      "assert is_palindrome('level') is True",
+      "assert is_palindrome('python') is False",
+      "assert is_palindrome('') is True"
+    ]
+  },
+  {
+    "task_id": "HumanEval/8",
+    "prompt": "实现函数 `sum_list(nums)`，返回整数列表所有元素之和。",
+    "entry_point": "def sum_list(nums: list[int]) -> int:",
+    "tests": [
+      "assert sum_list([1, 2, 3]) == 6",
+      "assert sum_list([]) == 0",
+      "assert sum_list([-1, 5, 2]) == 6"
+    ]
+  },
+  {
+    "task_id": "HumanEval/9",
+    "prompt": "实现函数 `remove_duplicates(nums)`，保持原顺序去重后返回新列表。",
+    "entry_point": "def remove_duplicates(nums: list[int]) -> list[int]:",
+    "tests": [
+      "assert remove_duplicates([1, 2, 2, 3]) == [1, 2, 3]",
+      "assert remove_duplicates([]) == []",
+      "assert remove_duplicates([4, 4, 4]) == [4]"
+    ]
+  },
+  {
+    "task_id": "HumanEval/10",
+    "prompt": "实现函数 `square_numbers(nums)`，返回列表中每个数字平方后的新列表。",
+    "entry_point": "def square_numbers(nums: list[int]) -> list[int]:",
+    "tests": [
+      "assert square_numbers([1, 2, 3]) == [1, 4, 9]",
+      "assert square_numbers([]) == []",
+      "assert square_numbers([-2, 4]) == [4, 16]"
+    ]
+  },
+  {
+    "task_id": "HumanEval/11",
+    "prompt": "实现函数 `word_count(text)`，按空格分词并返回单词数量，空字符串返回 0。",
+    "entry_point": "def word_count(text: str) -> int:",
+    "tests": [
+      "assert word_count('hello world') == 2",
+      "assert word_count('') == 0",
+      "assert word_count('one two three four') == 4"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "task_id": "T001",
+    "user_query": "帮我预订从北京到上海的航班",
+    "expected_tools": ["search_flight", "book_flight"],
+    "expected_tool_sequence": ["search_flight", "book_flight"],
+    "expected_answer_keywords": ["航班", "预订", "成功"],
+    "ground_truth_answer": "已成功预订：flight。",
+    "success_criteria": {"must_have_booking": true}
+  },
+  {
+    "task_id": "T002",
+    "user_query": "预订上海的希尔顿酒店，住两晚",
+    "expected_tools": ["search_hotel", "book_hotel"],
+    "expected_tool_sequence": ["search_hotel", "book_hotel"],
+    "expected_answer_keywords": ["酒店", "希尔顿", "预订"],
+    "ground_truth_answer": "已成功预订：hotel。",
+    "success_criteria": {}
+  },
+  {
+    "task_id": "T003",
+    "user_query": "帮我预订航班和酒店，从北京到上海，住希尔顿",
+    "expected_tools": ["search_flight", "book_flight", "search_hotel", "book_hotel"],
+    "expected_tool_sequence": ["search_flight", "book_flight", "search_hotel", "book_hotel"],
+    "expected_answer_keywords": ["航班", "酒店", "希尔顿", "预订"],
+    "ground_truth_answer": "已成功预订：flight, hotel。",
+    "success_criteria": {}
+  },
+  {
+    "task_id": "T004",
+    "user_query": "帮我在上海租车两天",
+    "expected_tools": ["search_car", "book_car"],
+    "expected_tool_sequence": ["search_car", "book_car"],
+    "expected_answer_keywords": ["租车", "预订", "成功"],
+    "ground_truth_answer": "已成功预订：car。",
+    "success_criteria": {}
+  },
+  {
+    "task_id": "T005",
+    "user_query": "帮我同时预订航班、酒店和租车，从北京到上海出差",
+    "expected_tools": ["search_flight", "book_flight", "search_hotel", "book_hotel", "search_car", "book_car"],
+    "expected_tool_sequence": ["search_flight", "book_flight", "search_hotel", "book_hotel", "search_car", "book_car"],
+    "expected_answer_keywords": ["航班", "酒店", "租车", "预订"],
+    "ground_truth_answer": "已成功预订：flight, hotel, car。",
+    "success_criteria": {}
+  }
+]

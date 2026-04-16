@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "choices": ["Berlin", "Madrid", "Paris", "Rome"],
+    "answer": 2,
+    "subject": "geography"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "choices": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": 1,
+    "subject": "astronomy"
+  },
+  {
+    "question": "What is the derivative of x^2 with respect to x?",
+    "choices": ["x", "2x", "x^2", "2"],
+    "answer": 1,
+    "subject": "mathematics"
+  },
+  {
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "choices": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+    "answer": 1,
+    "subject": "literature"
+  },
+  {
+    "question": "Which organ in the human body is primarily responsible for filtering blood?",
+    "choices": ["Heart", "Liver", "Kidney", "Lung"],
+    "answer": 2,
+    "subject": "biology"
+  },
+  {
+    "question": "In computer science, what does CPU stand for?",
+    "choices": ["Central Process Unit", "Central Processing Unit", "Computer Personal Unit", "Central Power Unit"],
+    "answer": 1,
+    "subject": "computer_science"
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "choices": ["Ag", "Au", "Gd", "Go"],
+    "answer": 1,
+    "subject": "chemistry"
+  },
+  {
+    "question": "Which law states that the force between two charges is proportional to the product of the charges and inversely proportional to the square of the distance between them?",
+    "choices": ["Newton's First Law", "Ohm's Law", "Coulomb's Law", "Faraday's Law"],
+    "answer": 2,
+    "subject": "physics"
+  },
+  {
+    "question": "Who was the first president of the United States?",
+    "choices": ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"],
+    "answer": 1,
+    "subject": "history"
+  },
+  {
+    "question": "In economics, what does GDP stand for?",
+    "choices": ["General Domestic Product", "Gross Domestic Product", "Gross Development Plan", "General Development Product"],
+    "answer": 1,
+    "subject": "economics"
+  },
+  {
+    "question": "Which of the following is a prime number?",
+    "choices": ["21", "27", "29", "33"],
+    "answer": 2,
+    "subject": "mathematics"
+  },
+  {
+    "question": "What is the largest mammal on Earth?",
+    "choices": ["African elephant", "Blue whale", "Giraffe", "Hippopotamus"],
+    "answer": 1,
+    "subject": "biology"
+  },
+  {
+    "question": "Which programming language is commonly used for data analysis and machine learning?",
+    "choices": ["Python", "HTML", "CSS", "SQL only"],
+    "answer": 0,
+    "subject": "computer_science"
+  },
+  {
+    "question": "What is the boiling point of water at standard atmospheric pressure?",
+    "choices": ["90°C", "95°C", "100°C", "110°C"],
+    "answer": 2,
+    "subject": "chemistry"
+  },
+  {
+    "question": "Which branch of government is primarily responsible for interpreting laws in the United States?",
+    "choices": ["Executive", "Legislative", "Judicial", "Administrative"],
+    "answer": 2,
+    "subject": "politics"
+  }
+]
